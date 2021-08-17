@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <div class="toolbar">
+    <div class="menu-app">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <p>{{title}}</p></div>
+
+    <div class="like-share">
+      <button mat-icon-button class="example-icon">
+        <mat-icon>share</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
+  </div>
+
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-menu-drawer></app-menu-drawer>
+  </mat-drawer>
+  <div class="planets">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
